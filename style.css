@@ -20,10 +20,10 @@ main {
     display: flex;
     flex-direction: column;
     border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-h2{
+h2 {
     background: linear-gradient(135deg, #B11212, #8F0E0E);
     font-weight: 600;
     width: 100%;
@@ -34,10 +34,10 @@ h2{
     color: white;
 }
 
-#titulo{
+#titulo {
     text-align: center;
     font-size: 16px;
-    background-color: rgba(255,255,255,0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     color: white;
     width: fit-content;
     padding: 5px;
@@ -46,24 +46,24 @@ h2{
     margin-left: 10px;
 }
 
-h3{
+h3 {
     text-align: center;
     padding: 15px;
     font-size: 20px;
     color: white;
 }
 
-section{
+section {
     margin: auto;
     width: 90%;
 }
 
 /* mantém os botões iguais */
-.notas{
+.notas {
     width: 100%;
     padding: 10px;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     border: 0px;
     background-color: #FFFFFF;
@@ -76,14 +76,14 @@ section{
 }
 
 /* 👇 isso garante que o footer fique embaixo */
-footer{
+footer {
     margin-top: auto;
     display: flex;
     justify-content: space-around;
     padding: 6px;
 }
 
-footer button{
+footer button {
     padding: 11px;
     border: none;
     border-radius: 15px;
@@ -95,4 +95,11 @@ footer button{
 
 footer button:hover {
     background-color: #E5E7EB;
+}
+
+#mensagem {
+    text-align: center;
+    color: white;
+    margin-top: 200px;
+    font-size: 25px;
 }

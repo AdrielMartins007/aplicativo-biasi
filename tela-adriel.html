@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    button {
+        width: 150px;
+    }
+
+    #mensagem {
+        text-align: center;
+        color: white;
+        margin-top: 200px;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+
+    <main>
+
+        <h2>
+            <p id="titulo">Adriel M.</p> CONTROLE DE NOTAS FISCAIS
+        </h2>
+
+        <h3>Pré-entrada</h3>
+
+        <p id="mensagem">Nenhuma nota no momento...</p>
+
+        <section>
+
+            <button onclick="confirmacao(this)" class="notas">NF: 123456 - Colina <p>✅</p></button>
+            <button onclick="confirmacao(this)" class="notas">NF: 123456 - Okajima <p>✅</p></button>
+            <button onclick="confirmacao(this)" class="notas">NF: 12345 - Ebd <p>✅</p></button>
+            <button onclick="confirmacao(this)" class="notas">NF: 1234 - Centro Norte <p>✅</p></button>
+            <button onclick="confirmacao(this)" class="notas">NF: 123456 - Sitio da Serra <p>✅</p></button>
+            <button onclick="confirmacao(this)" class="notas">NF: 123456 - Colina <p>✅</p></button>
+            <button onclick="confirmacao(this)" class="notas">NF: 123456 - Colina <p>✅</p></button>
+
+        </section>
+
+        <footer>
+            <button onclick="atualizar()">Atualizar</button>
+        </footer>
+
+    </main>
+
+</body>
+
+<script>
+    let indice = 0
+    let notas = []
+    let mensagem
+
+    window.onload = function () {
+        notas = document.querySelectorAll('.notas')
+        mensagem = document.getElementById('mensagem')
+
+        notas.forEach(nota => {
+            nota.style.display = 'none'
+        })
+
+        verificarNotas()
+    }
+
+    function atualizar() {
+        if (indice < notas.length) {
+            setTimeout(() => {
+                notas[indice].style.display = 'flex'
+                indice++
+                verificarNotas()
+            }, 300)
+        }
+    }
+
+    function confirmacao(botao) {
+        const confirmar = confirm('Deseja confirmar a entrada da nota?')
+
+        if (confirmar) {
+            botao.style.display = 'none'
+            verificarNotas()
+        }
+    }
+
+    function verificarNotas() {
+        let algumaVisivel = false
+
+        notas.forEach(nota => {
+            if (nota.style.display !== 'none') {
+                algumaVisivel = true
+            }
+        })
+
+        mensagem.style.display = algumaVisivel ? 'none' : 'block'
+    }
+</script>
+
+</html>
