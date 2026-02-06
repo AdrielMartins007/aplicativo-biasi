@@ -8,13 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    #dois {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    #mudar {
+        margin-right: 10px;
+    }
+
+    #dois button {
+        text-align: center;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: white;
+        width: 80px;
+        border:none;
+        padding: 5px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        margin-left: 10px;
+    }
+</style>
+
 <body>
 
     <main>
 
-        <h2>
-            <p id="titulo">Filial 2</p> CONTROLE DE NOTAS FISCAIS
-        </h2>
+        <div id="cabec">
+            <div id="dois">
+                <p id="titulo">Filial 2</p>
+                <button id="mudar" onclick="location.href='tela-adriel.html' ">Mudar</button>
+            </div>
+            <h2>
+                CONTROLE DE NOTAS FISCAIS
+            </h2>
+        </div>
 
         <h3>Pré-entrada</h3>
         <section>
